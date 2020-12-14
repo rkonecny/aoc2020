@@ -1,6 +1,6 @@
 import math
-with open("input", "r") as inputFile:
-    input = inputFile.readlines()
+with open("input", "r") as fo:
+    input = fo.readlines()
 
 busLines = [(int(x), int(x)-i)
             for i, x in enumerate(input[1].split(",")) if x.isdigit()]

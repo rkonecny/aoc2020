@@ -1,5 +1,5 @@
-with open("input", "r") as inputFile:
-    input = inputFile.readlines()
+with open("input", "r") as fo:
+    input = fo.readlines()
 
 departTimestamp = int(input[0])
 busLines = [int(x) for x in input[1].split(",") if x.isdigit()]

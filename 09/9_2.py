@@ -1,19 +1,19 @@
-fo = open('input', "r")
-int_list = [int(i) for i in fo.readlines()]
-fo.close()
+with open('input', "r") as fo:
+    list = [int(i) for i in fo.readlines()]
 
 number = 23278925
 
 
 def getInterval():
-  for i in range(len(int_list)):
-    sum = int_list[i]
-    for j in range(i+1, len(int_list)):
-      sum += int_list[j]
-      if sum > number:
-        break
-      if sum == number:
-        return(i,j)
+    for i in range(len(int_list)):
+        sum = int_list[i]
+        for j in range(i+1, len(int_list)):
+            sum += int_list[j]
+            if sum > number:
+                break
+            if sum == number:
+                return(i, j)
+
 
 interval = getInterval()
 
